@@ -14,7 +14,10 @@ const cart: Reducer<ICartState> = (state = INITIAL_STATE, action) => {
                 ...state,
                 items: [
                     ...state.items,
-                    product
+                    {
+                        product,
+                        quantity: 1
+                    }
                 ]
             }
         }
