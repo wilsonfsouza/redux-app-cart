@@ -1,8 +1,9 @@
 import { useSelector } from "react-redux";
+import { IState } from "../store";
+import { ICartItem } from "../store/modules/cart/types";
 
 export function Cart() {
-    const state = useSelector(state => state);
-    console.log(state);
+    const cart = useSelector<IState, ICartItem[]>(state => state.cart.items);
 
     return (
         <table>
